@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  #emojiDisplay {
+    font-size: 3em;
+    margin: 20px 0;
+  }
+  
+  #inputField {
+    font-size: 1em;
+    padding: 5px;
+  }
+  
+  #score {
+    font-weight: bold;
+  }
+  
+  #timer {
+    margin-top: 20px;
+    font-weight: bold;
+  }
