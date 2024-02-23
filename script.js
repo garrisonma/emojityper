@@ -62,6 +62,8 @@ function endGame() {
   document.getElementById('timerDisplay').innerText = 'Time\'s up!';
   document.getElementById('inputField').disabled = true;
 }
-
+document.getElementById('restartButton').addEventListener('click', function(){
+    startGame();
+})
 // Start the game when the page loads
 startGame();
