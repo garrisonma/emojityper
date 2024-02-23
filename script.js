@@ -56,16 +56,16 @@ document.getElementById('inputField').addEventListener('input', function(event) 
   }
 });
 
-// Function to end the game
 function endGame() {
   clearInterval(timerInterval);
   document.getElementById('timerDisplay').innerText = 'Time\'s up!';
   document.getElementById('inputField').disabled = true;
 }
+
 document.getElementById('restartButton').addEventListener('click', function(){
-    startGame()
+    startGame();
 })
-// Start the game when the page loads
+
 setTimeout(() => {
     startGame();
-}, 5000);
+}, 2000);
