@@ -6,11 +6,15 @@ const keywordsArray = ["dog", "cat", "bird", "fish", "elephant", "lion", "tiger"
 let currentName;
 
 function startGame() {
-  timerValue = 60;
-  displayRandomEmoji();
-
+  score = 0;
+  document.getElementById('score').innerText = score;
+  timerValue = 60; 
+  document.getElementById('timerDisplay').innerText = timerValue + 's';
+  clearInterval(timerInterval); 
   timerInterval = setInterval(updateTimer, 1000);
+  displayRandomEmoji();
 }
+
 
 async function fetchRandomEmoji() {
   const i = Math.floor(Math.random() * keywordsArray.length);
@@ -64,7 +68,6 @@ function endGame() {
 }
 
 document.getElementById('restartButton').addEventListener('click', function(){
-  timerValue = 60;
     startGame();
 })
 
