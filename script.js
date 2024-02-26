@@ -6,6 +6,7 @@ const keywordsArray = ["dog", "cat", "bird", "fish", "elephant", "lion", "tiger"
 let currentName;
 
 function startGame() {
+  timerValue = 60;
   displayRandomEmoji();
 
   timerInterval = setInterval(updateTimer, 1000);
@@ -35,7 +36,7 @@ async function displayRandomEmoji() {
 
 function updateTimer() {
   timerValue--;
-  document.getElementById('timerDisplay').innerText = timerValue + ' s';
+  document.getElementById('timerDisplay').innerText = timerValue + 's';
 
 
   if (timerValue === 0) {
