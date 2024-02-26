@@ -64,6 +64,7 @@ function endGame() {
 }
 
 document.getElementById('restartButton').addEventListener('click', function(){
+  timerValue = 60;
     startGame();
 })
 
