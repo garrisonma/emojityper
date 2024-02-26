@@ -74,4 +74,7 @@ document.getElementById('restartButton').addEventListener('click', function(){
 document.getElementById('playButton').addEventListener('click', function(){
   startGame();
 })
+window.onload = function() {
+  document.getElementById('playButton').style.display = 'block';
+}
 
