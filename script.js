@@ -13,6 +13,7 @@ function startGame() {
   clearInterval(timerInterval); 
   timerInterval = setInterval(updateTimer, 1000);
   displayRandomEmoji();
+  document.getElementById('playButton').style.display = 'none';
 }
 
 
@@ -70,7 +71,7 @@ function endGame() {
 document.getElementById('restartButton').addEventListener('click', function(){
     startGame();
 })
+document.getElementById('playButton').addEventListener('click', function(){
+  startGame();
+})
 
-setTimeout(() => {
-    startGame();
-}, 2000);
