@@ -7,15 +7,18 @@
   <title>Emoji Typer</title>
   <link rel="stylesheet" href="style.css">
   <style>
+      #timerDisplay, #emojiDisplay, #scoreDisplay {
+            display: none;
+        }
   </style>
-</head>
+</head>  
 
 <body>
   <h1>Emoji Typer</h1>
   <div id="emojiDisplay"></div>
   <input type="text" id="inputField" placeholder="Type the emoji name...">
   <p>Score: <span id="score">0</span></p>
-  <div id="timer">Timer: <span id="timerDisplay">60</span></div>
+  <div id="timer">Timer: <span id="timerDisplay">60s</span></div>
   <button id="restartButton">Play</button>
   <script src="script.js"></script>
 </body>
