@@ -10,17 +10,37 @@
     #playButton{
       display: none;
     }
+    #restartButton{
+      display: none;
+    }
+    body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button {
+            margin: 10px;
+        }
   </style>
 </head>
 
 <body>
-  <h1>Emoji Type</h1>
+  <h1>Emoji Typer</h1>
   <div id="emojiDisplay"></div>
   <input type="text" id="inputField" placeholder="Type the emoji name...">
   <p>Score: <span id="score">0</span></p>
   <div id="timer">Timer: <span id="timerDisplay">60</span></div>
-  <button id="restartButton">Restart</button>
-  <button id="playButton">Play</button>
+  <div class="button-container">
+    <button id="restartButton">Restart</button>
+    <button id="playButton">Play</button>
+</div>
   <script src="script.js"></script>
   
 </body>

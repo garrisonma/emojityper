@@ -14,6 +14,7 @@ function startGame() {
   timerInterval = setInterval(updateTimer, 1000);
   displayRandomEmoji();
   document.getElementById('playButton').style.display = 'none';
+  document.getElementById('restartButton').style.display = 'block';
 }
 
 
@@ -74,7 +75,5 @@ document.getElementById('restartButton').addEventListener('click', function(){
 document.getElementById('playButton').addEventListener('click', function(){
   startGame();
 })
-window.onload = function() {
-  document.getElementById('playButton').style.display = 'block';
-}
+
 
