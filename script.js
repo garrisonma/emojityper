@@ -6,9 +6,9 @@ const keywordsArray = ["dog", "cat", "bird", "fish", "elephant", "lion", "tiger"
 let currentName;
 
 function startGame() {
-  document.getElementById('timerDisplay').style.display = 'block';
-  document.getElementById('emojiDisplay').style.display = 'block';
-  document.getElementById('scoreDisplay').style.display = 'block';
+  //document.getElementById('timerDisplay').style.display = 'block';
+  //document.getElementById('emojiDisplay').style.display = 'block';
+ // document.getElementById('scoreDisplay').style.display = 'block';
   score = 0;
   document.getElementById('score').innerText = score+" points";
   timerValue = 60; 
