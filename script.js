@@ -4,6 +4,10 @@ let timerInterval;
 const keywordsArray = ["dog", "cat", "bird", "fish", "elephant", "lion", "tiger", "zebra", "house", "book", "computer", "window", "man", "sock", "shoe", "taco", "hamburger", "pizza", "sushi", "chicken", "pig", "poo", "cry", "brain", "rainbow", "skull", "blood", "zombie", "clown", "alien", "swim", "angel", "angry", "mushroom", "pancake", "chocolate", "ice cream", "camera", "television", "laugh"];
 //const keywordsArray = ["peekaboo"];
 let currentName;
+let streakCounter = 0;
+let lastEmojiTime = 0;
+const streakWindow = 5000;
+const streakThreshold = 3;
 
 function startGame() {
   //document.getElementById('timerDisplay').style.display = 'block';
@@ -54,13 +58,32 @@ function updateTimer() {
 
 document.getElementById('inputField').addEventListener('input', function(event) {
   const userInput = event.target.value.trim();
+  const currentEmoji = document.getElementById('emojiDisplay').innerText;
 
+  // Check if user input matches the current emoji name
+  if (userInput.toLowerCase() === currentEmoji.toLowerCase()) {
+      // Calculate time difference since last correct guess
+      const currentTime = Date.now();
+      const timeDifference = currentTime - lastEmojiTime;
+      lastEmojiTime = currentTime;
+      // Increase streak counter if within the streak window
+      if (timeDifference <= streakWindow) {
+          streakCounter++;
+          if (streakCounter >= streakThreshold) {
+              // Award extra points for streak
+              score += 50;
+          }
+      } else {
+          streakCounter = 1; // Start new streak
+      }
 
-  if (userInput !== '' && userInput.toLowerCase() === currentName) {
-    score += 10;
-    document.getElementById('score').innerText = score;
-    displayRandomEmoji();
-    document.getElementById('inputField').value = '';
+      // Update score display
+      score += 10;
+      document.getElementById('score').innerText = score;
+
+      // Display new emoji
+      displayRandomEmoji();
+      document.getElementById('inputField').value = ''; // Clear input field
   }
 });
 
