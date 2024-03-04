@@ -10,10 +10,10 @@ function startGame() {
   //document.getElementById('emojiDisplay').style.display = 'block';
  // document.getElementById('scoreDisplay').style.display = 'block';
   score = 0;
-  document.getElementById('inputField').disabled = false;
   document.getElementById('score').innerText = score+" points";
   timerValue = 60; 
   document.getElementById('timerDisplay').innerText = timerValue + 's';
+  document.getElementById('inputField').disabled = false;
   clearInterval(timerInterval); 
   timerInterval = setInterval(updateTimer, 1000);
   displayRandomEmoji();
