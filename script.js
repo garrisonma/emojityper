@@ -58,24 +58,24 @@ function updateTimer() {
 
 document.getElementById('inputField').addEventListener('input', function(event) {
   const userInput = event.target.value.trim();
-  //const currentEmoji = document.getElementById('emojiDisplay').innerText;
+ 
 
   // Check if user input matches the current emoji name
   if (userInput !== '' && userInput.toLowerCase() === currentName) {
       // Calculate time difference since last correct guess
-      const currentTime = Date.now();
-      const timeDifference = currentTime - lastEmojiTime;
-      lastEmojiTime = currentTime;
+      //const currentTime = Date.now();
+      //const timeDifference = currentTime - lastEmojiTime;
+      //lastEmojiTime = currentTime;
       // Increase streak counter if within the streak window
-      if (timeDifference <= streakWindow) {
-          streakCounter++;
-          if (streakCounter >= streakThreshold) {
+      //if (timeDifference <= streakWindow) {
+       //   streakCounter++;
+        //  if (streakCounter >= streakThreshold) {
               // Award extra points for streak
-              score += 50;
-          }
-      } else {
-          streakCounter = 1; // Start new streak
-      }
+        //      score += 50;
+         // }
+      //} else {
+       //   streakCounter = 1; // Start new streak
+      //}
 
       // Update score display
       score += 10;
