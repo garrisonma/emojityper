@@ -58,10 +58,10 @@ function updateTimer() {
 
 document.getElementById('inputField').addEventListener('input', function(event) {
   const userInput = event.target.value.trim();
-  const currentEmoji = document.getElementById('emojiDisplay').innerText;
+  //const currentEmoji = document.getElementById('emojiDisplay').innerText;
 
   // Check if user input matches the current emoji name
-  if (userInput.toLowerCase() === currentEmoji.toLowerCase()) {
+  if (userInput !== '' && userInput.toLowerCase() === currentName) {
       // Calculate time difference since last correct guess
       const currentTime = Date.now();
       const timeDifference = currentTime - lastEmojiTime;
