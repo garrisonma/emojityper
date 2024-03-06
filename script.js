@@ -68,29 +68,31 @@ function showStreakNotification(bonusPoints) {
       }, 1000); 
   }, 3000);
 }
+
 document.getElementById('inputField').addEventListener('input', function(event) {
   const userInput = event.target.value.trim();
 
 
   if (userInput !== '' && userInput.toLowerCase() === currentName) {
-    const currentTime = Date.now();
-    const timeDifference = currentTime - lastEmojiTime;
-    let bonusStreak = 0;
-    let bonusPoints = 0;
-    let streakDif = 0;
-    lastEmojiTime = currentTime;
-    if (timeDifference <= streakWindow) {
-        streakCounter++;
-        if (streakCounter >= streakThreshold) {
-            streakDif = streakCounter - streakThreshold;
-            bonusStreak = 10*streakDif;
-            bonusPoints = 30 + bonusStreak;
-            showStreakNotification(bonusPoints);
-            score += 30 + bonusStreak;
-        }
-    } else {
-        streakCounter = 1; 
-    }
+      const currentTime = Date.now();
+      const timeDifference = currentTime - lastEmojiTime;
+      let bonusStreak = 0;
+      let bonusPoints = 0;
+      let streakDif = 0;
+      lastEmojiTime = currentTime;
+      if (timeDifference <= streakWindow) {
+          streakCounter++;
+          if (streakCounter >= streakThreshold) {
+              streakDif = streakCounter - streakThreshold;
+              bonusStreak = 10*streakDif;
+              bonusPoints = 30 + bonusStreak;
+              showStreakNotification(bonusPoints);
+              score += 30 + bonusStreak;
+          }
+      } else {
+          streakCounter = 1; 
+      }
+
       score += 10;
       document.getElementById('score').innerText = score;
 
