@@ -6,7 +6,7 @@ const keywordsArray = ["dog", "cat", "bird", "fish", "elephant", "lion", "tiger"
 let currentName;
 let streakCounter = 0;
 let lastEmojiTime = 0;
-const streakWindow = 1700;
+const streakWindow = 2000;
 const streakThreshold = 3;
 
 function startGame() {
