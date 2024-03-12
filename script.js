@@ -1,7 +1,7 @@
 let score = 0;
 let timerValue = 60;
 let timerInterval;
-const keywordsArray = ["dog", "cat", "bird", "fish", "elephant", "lion", "tiger", "zebra", "house", "book", "computer", "window", "man", "sock", "shoe", "taco", "hamburger", "pizza", "sushi", "chicken", "pig", "poo", "cry", "brain", "rainbow", "skull", "blood", "zombie", "clown", "alien", "swim", "angel", "angry", "mushroom", "pancake", "chocolate", "ice cream", "camera", "television", "laugh"];
+const keywordsArray = ["dog", "cat", "bird", "fish", "elephant", "lion", "tiger", "zebra", "house", "book", "computer", "window", "man", "sock", "shoe", "taco", "hamburger", "pizza", "sushi", "chicken", "pig", "poo", "cry", "brain", "rainbow", "skull", "blood", "zombie", "clown", "alien", "swim", "angel", "mushroom", "pancake", "chocolate", "ice cream", "camera", "television", "laugh", "yawn", "snake", "letter", "family", "meat", "bread", "milk", "carrot", "onion", "potato", "cucumber", "banana", "monkey", "mango", "pear", "pineapple", "pencil", "panda", "tree", "watch"];
 //const keywordsArray = ["peekaboo"];
 let currentName;
 let streakCounter = 0;
